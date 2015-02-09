@@ -2,6 +2,9 @@
 
 echo 'Start Setting OSX Defaults'
 
+# Pass in hostname
+args=("$@")
+
 #Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0.02
 
@@ -19,6 +22,6 @@ mkdir ~/Desktop/Screenshots
 defaults write com.apple.screencapture location ~/Desktop/Screenshots
 
 # Set Hostname
-sudo scutil --set HostName cyber
+sudo scutil --set HostName ${args[0]}
 
 echo 'Finished Setting OSX Defaults'

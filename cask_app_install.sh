@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo 'install brew cask applications'
+
 brew cask install vlc
 brew cask install vagrant
 brew cask install spotify
@@ -15,3 +17,5 @@ brew cask install balsamiq-mockups
 brew cask install hocus-focus
 brew cask install alfred
 brew cask install bartender
+
+echo 'finished installing brew cask applications'
