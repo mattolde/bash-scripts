@@ -9,4 +9,6 @@ echo "Array items:"
 for item in ${file_array[*]}
 do
     printf "   %s\n" $item
+    value=$(<$item)
+    echo "$value"
 done
