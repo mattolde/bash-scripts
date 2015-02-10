@@ -10,5 +10,5 @@ for item in ${file_array[*]}
 do
     printf "   %s\n" $item
     value=$(<$item)
-    echo "$value"
+    echo "$value" > output.md
 done
