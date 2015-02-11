@@ -8,8 +8,9 @@ file_array=(*)
 echo "Array items:"
 for item in ${file_array[*]}
 do
-    printf "   %s\n" $item
-    #value=$(<$item)
+    echo "Coping: " $item
+
     echo $(cp ${item} ${item%.sh}.md)
-    # echo "$value" > output.md
+
+    echo "Created: " ${item%.sh}.md
 done
