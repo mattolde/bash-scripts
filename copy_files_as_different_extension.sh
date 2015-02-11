@@ -9,6 +9,7 @@ echo "Array items:"
 for item in ${file_array[*]}
 do
     printf "   %s\n" $item
-    value=$(<$item)
-    echo "$value" > output.md
+    #value=$(<$item)
+    echo $(cp ${item} ${item%.sh}.md)
+    # echo "$value" > output.md
 done
