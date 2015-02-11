@@ -2,15 +2,17 @@
 
 # Get list of files from directory
 
-shopt -s nullglob
-file_array=(*)
+dirlist=($(ls | grep \.ft))
 
 echo "Array items:"
-for item in ${file_array[*]}
+
+for item in ${dirlist[*]}
 do
-    echo "Coping: " $item
+    echo "Coping: " ${item}
 
-    echo $(cp ${item} ${item%.sh}.md)
+    echo "cp ${item} /Users/matthewolde/Dropbox/notes/${item%.ft}.md"
 
-    echo "Created: " ${item%.sh}.md
+    echo $(cp ${item} /Users/matthewolde/Dropbox/notes/${item%.ft}.md)
+
+    echo "Created: " ${item%.ft}.md
 done
